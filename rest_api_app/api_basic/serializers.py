@@ -9,8 +9,8 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = ('id', 'real_name', 'tz', 'activity_periods')
 
-    def __str__(self):
-        return '%d: %d' % (self.start_date, self.end_date)
+    # def __str__(self):
+    #     return '%d: %d' % (self.start_date, self.end_date)
 # class ActivitySerializer(serializers.ModelSerializer):
 #     class Meta:
 #         model = ActivityPeriod
