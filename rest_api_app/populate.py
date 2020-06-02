@@ -14,14 +14,12 @@ print(fakegen)
 def populate(N=5):
 
   for entry in range(N):
-    fake_name = fakegen.name().split()
-    print("name")
-    print(fake_name)
-    fake_first_name = fake_name[0]
-    fake_last_name = fake_name[1]
+    fake_id = fakegen.id()
+    fake_name = fakegen.name()
+    fake_tz = fakegen.timezone()
     fake_email = fakegen.email()
 
-    user = User.objects.get_or_create(first_name=fake_first_name, last_name=fake_last_name, email=fake_email)[0]
+    user = User.objects.get_or_create(id=fake_id,real_name=fake_name,email=fake_email,tz=fake_tz)[0]
 
 if __name__ == '__main__':
   print("Populating script")

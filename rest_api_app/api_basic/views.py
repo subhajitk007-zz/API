@@ -33,7 +33,7 @@ class UserAPIView(APIView):
         users = User.objects.all()
 
         serializer = UserSerializer(users, many=True)
-
+        print(serializer.data)
         return Response(serializer.data)
 
     def post(self, request):

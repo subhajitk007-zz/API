@@ -4,6 +4,7 @@ from .models import User,ActivityPeriod
 
 class UserSerializer(serializers.ModelSerializer):
     activity_periods = serializers.StringRelatedField(many=True)
+    print(activity_periods)
     class Meta:
         model = User
         fields = ('id', 'real_name', 'tz', 'activity_periods')
